@@ -1,0 +1,22 @@
+name: ExplosiveTrees
+version: 1.0.3
+author: JJDev256
+main: me.JJDev256.CrazyScenarios.ExplosiveTrees.Main
+api-version: 1.15
+
+commands:
+  settreesexplosive:
+    description: Toggle the ExplosiveTrees plugin.
+    usage: USAGE > /setTreesExplosive <active>
+
+permissions:
+  explosivetrees.*:
+    children:
+      explosivetrees.commands: true
+  explosivetrees.commands.*:
+    children:
+      explosivetrees.commands.toggle: true
+  explosivetrees.commands.toggle.*:
+    default: op
+    children: 
+      explosivetrees.commands.toggle.use: true
